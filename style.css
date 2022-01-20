@@ -2,18 +2,21 @@
 @import url('https://fonts.cdnfonts.com/css/gotham');               
 *
 {
+    --link-color: rgb(190, 204, 0);
+    --bg-color-blue: rgb(0, 1, 22);
+
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 body
-{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),  url(startup-ga79c075e5_1920.png);
+{ 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)) ,url(startup-ga79c075e5_1920.png);
     color: white;
-    background-size: 260%;
-    --link-color: rgb(190, 204, 0);
-    --bg-color-blue: rgb(0, 1, 22);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: start;
 }
 
 /*Navbar*/
@@ -24,7 +27,8 @@ nav
     padding: 15px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: baseline;
 }
 
 nav div.logo-name
@@ -34,6 +38,25 @@ nav div.logo-name
     font-weight: 500;
 }
 
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 150px;
+    list-style: none;
+    font-size: 18px;
+}
+nav ul li a{
+    transition: 0.4s;
+    color: white;
+    text-decoration: none;
+    font-family: 'Gotham thin';
+}
+nav ul li a:hover{
+    transition: 0.4s;
+    color: var(--link-color);
+}
+
 /*Content*/
 
 main
@@ -41,7 +64,7 @@ main
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
-    min-height: 360px;
+    min-height: 65vh;
     margin: 30px;
 }
 
@@ -84,7 +107,7 @@ button
 }
 button:hover
 {
-    box-shadow: 0px 0px 5px var(--link-color);
+    box-shadow: 0px 0px 2px var(--link-color);
     color: var(--link-color);
     border-color: var(--link-color);
     transition: 0.4s;
@@ -92,55 +115,63 @@ button:hover
 
 
 
-section.about-me
+section
 {
     background-color: var(--bg-color-blue);
     font-size: 20px;
     padding: 50px;
     text-align: start;
 }
-.about-me h1, .about-me p
+section h1, section p
 {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+}
+section p a{
+    color: var(--link-color);
 }
 
-.about-me h1
+section h1
 {
-    color: rgb(76, 56, 255);
+    color: var(--link-color);
     font-family: 'Gotham';
     text-align: center;
 }
 
 /*footer*/
 
-footer
+footer#credits
 {
-    background-color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)) ,url(startup-ga79c075e5_1920.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: start;
+
     padding: 30px;
     height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
+}
+p#cta{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 50px;
 }
 footer button
 {
-    margin: 50px 0;
+    margin-bottom: 50px;
+}
+footer p#info{
+    align-self: end;
 }
 
 /*Breakpoints*/
 
-@media(min-width:500px)
-{
-    body{
-        background-size: 220%;
-    }
-}
-
 @media(min-width:700px)
 {
-    body{
-        background-size: 150%;
+    nav ul{
+        width: 200px;
     }
     main button{
         align-self: flex-start;
@@ -149,11 +180,12 @@ footer button
 
 @media(min-width:1020px)
 {
-    body{
-        background-size: 120%;
-    }
     nav div.logo-name{
-        font-size: 30px;
+        font-size: 28px;
+    }
+    nav ul{
+        width: 250px;
+        font-size: 20px;
     }
     main{
         margin: 60px;
