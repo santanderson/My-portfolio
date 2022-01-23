@@ -26,9 +26,7 @@ nav
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
     padding: 15px;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: baseline;
+    justify-content: center;
 }
 
 nav div.logo-name
@@ -36,25 +34,6 @@ nav div.logo-name
     font-size: 25px;
     font-family: 'Gotham';
     font-weight: 500;
-}
-
-nav ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 150px;
-    list-style: none;
-    font-size: 18px;
-}
-nav ul li a{
-    transition: 0.4s;
-    color: white;
-    text-decoration: none;
-    font-family: 'Gotham thin';
-}
-nav ul li a:hover{
-    transition: 0.4s;
-    color: var(--link-color);
 }
 
 /*Content*/
@@ -137,6 +116,35 @@ section h1
     text-align: center;
 }
 
+
+aside{
+    transition: 0.3s;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--link-color);
+    color: var(--bg-color-blue);
+    font-size: 30px;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    border-radius: 10px;
+    height: 80vh;
+    width: 400px;
+    padding: 30px;
+}
+
+aside a{
+    text-decoration: none;
+    color: var(--bg-color-blue);
+    transition: 0.3s;
+}
+
+aside a:hover{
+    color: white;
+}
+
 /*footer*/
 
 footer#credits
@@ -170,8 +178,11 @@ footer p#info{
 
 @media(min-width:700px)
 {
-    nav ul{
-        width: 200px;
+    nav{
+        justify-content: start;
+    }
+    nav div.logo-name{
+        margin-left: 10%;
     }
     main button{
         align-self: flex-start;
@@ -182,10 +193,6 @@ footer p#info{
 {
     nav div.logo-name{
         font-size: 28px;
-    }
-    nav ul{
-        width: 250px;
-        font-size: 20px;
     }
     main{
         margin: 60px;

@@ -1,0 +1,65 @@
+@import url('https://fonts.cdnfonts.com/css/gotham');               
+*
+{
+    --link-color: rgb(190, 204, 0);
+    --bg-color-blue: rgb(0, 1, 22);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{background-color: var(--bg-color-blue);}
+
+main
+{
+    background-color: var(--bg-color-blue);
+    font-size: 20px;
+    padding: 50px;
+    text-align: center;
+}
+
+main h1
+{
+    margin-bottom: 70px;
+    color: var(--link-color);
+    font-family: 'Gotham';
+    text-align: center;
+}
+
+/*grid items*/
+
+.grid-container img{
+    width: 350px;
+    transition: 0.4s;
+}
+
+div.grid-container{
+    margin: auto ;
+    display: inline-grid;
+    grid-gap: 10px 50px;
+    grid-template-columns: 350px 350px 350px;
+}
+
+.grid-item p{
+    display: none;
+    position: absolute;
+    align-self: center;
+    margin: 40px;
+    color: white;
+}
+.grid-item a{
+    display: flex;
+}
+
+div.grid-item{
+    position: relative;
+    transition: 0.5s;
+}
+div.grid-item:hover img{
+    transition: 0.4s;
+    opacity: 30%;
+}
+.grid-item:hover p{
+    display: block;
+}
