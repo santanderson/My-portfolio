@@ -25,20 +25,22 @@ main h1
     color: var(--link-color);
     font-family: 'Gotham';
     text-align: center;
+    font-size: 27px;
 }
 
 /*grid items*/
 
 .grid-container img{
-    width: 350px;
+    width: 250px;
     transition: 0.4s;
 }
 
 div.grid-container{
-    margin: auto ;
+    margin-left: 50%;
+    margin-left: -0px;
     display: inline-grid;
-    grid-gap: 10px 50px;
-    grid-template-columns: 350px 350px 350px;
+    grid-gap: 30px;
+    grid-template-rows: 250px 250px 250px;
 }
 
 .grid-item p{
@@ -62,4 +64,34 @@ div.grid-item:hover img{
 }
 .grid-item:hover p{
     display: block;
+}
+
+@media(min-width:440px){
+    .grid-container img{
+        width: 290px;
+    }
+    div.grid-container{
+        grid-gap: 70px;
+    }
+}
+
+@media(min-width:770px){
+    .grid-container img{
+        width: 300px;
+    }
+    div.grid-container{
+        margin: auto;
+        grid-gap: 90px 100px;
+        grid-template-columns: 250px 250px;
+    }
+}
+
+@media(min-width: 1250px){
+    .grid-container img{
+        width: 350px;
+    }
+    div.grid-container{
+        grid-gap: 150px 50px;
+        grid-template-columns: 350px 350px 350px;
+    }
 }

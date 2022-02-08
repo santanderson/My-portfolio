@@ -149,7 +149,7 @@ aside a:hover{
 
 footer#credits
 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)) ,url(startup-ga79c075e5_1920.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)) ,url(startup-ga79c075e5_1920.png);
     background-size: cover;
     background-attachment: fixed;
     background-position: start;
